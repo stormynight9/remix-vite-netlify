@@ -5,21 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@netlify/edge-functions':
-    specifier: ^2.3.1
-    version: 2.3.1
   '@netlify/functions':
     specifier: ^2.6.0
     version: 2.6.0
   '@netlify/remix-adapter':
     specifier: ^2.3.0
     version: 2.3.0(@netlify/functions@2.6.0)(typescript@5.4.3)(vite@5.2.7)
-  '@netlify/remix-edge-adapter':
-    specifier: ^3.2.0
-    version: 3.2.0(@remix-run/server-runtime@2.8.1)(vite@5.2.7)
-  '@netlify/remix-runtime':
-    specifier: ^2.2.0
-    version: 2.2.0(@remix-run/server-runtime@2.8.1)
   '@remix-run/node':
     specifier: ^2.8.1
     version: 2.8.1(typescript@5.4.3)
@@ -942,10 +933,6 @@ packages:
       - supports-color
     dev: true
 
-  /@netlify/edge-functions@2.3.1:
-    resolution: {integrity: sha512-3sJzP1DmzMZppkAZpUixdHA4ryiKD1NSpLMRViYStE9Oe10rZPSnM8yl6A90vTBqCYvbAF5S7W9oPf2ucrCCIQ==}
-    dev: false
-
   /@netlify/functions@2.6.0:
     resolution: {integrity: sha512-vU20tij0fb4nRGACqb+5SQvKd50JYyTyEhQetCMHdakcJFzjLDivvRR16u1G2Oy4A7xNAtGJF1uz8reeOtTVcQ==}
     engines: {node: '>=14.0.0'}
@@ -974,30 +961,6 @@ packages:
       vite: 5.2.7
     transitivePeerDependencies:
       - typescript
-    dev: false
-
-  /@netlify/remix-edge-adapter@3.2.0(@remix-run/server-runtime@2.8.1)(vite@5.2.7):
-    resolution: {integrity: sha512-n6KagNPMuIc1xjneA+O7jRrD4XwbmfICizfqAXJdtMGopSXQ/bxknwHKMR1R0aNuTzyo3wWDzjQp6ZUKwuko0Q==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      vite: ^5.0.0
-    peerDependenciesMeta:
-      vite:
-        optional: true
-    dependencies:
-      '@netlify/remix-runtime': 2.2.0(@remix-run/server-runtime@2.8.1)
-      isbot: 4.4.0
-      vite: 5.2.7
-    transitivePeerDependencies:
-      - '@remix-run/server-runtime'
-    dev: false
-
-  /@netlify/remix-runtime@2.2.0(@remix-run/server-runtime@2.8.1):
-    resolution: {integrity: sha512-E4b+/DDPcVF5GkbZt1sGCZ2fRO4at/WuDybJ4oXUpn5giW65KTJ8x0OBDEKZa1XI7uHEU0IAupuUNpYwVga+Pw==}
-    peerDependencies:
-      '@remix-run/server-runtime': ^2.7.1
-    dependencies:
-      '@remix-run/server-runtime': 2.8.1(typescript@5.4.3)
     dev: false
 
   /@netlify/serverless-functions-api@1.14.0:
