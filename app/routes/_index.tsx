@@ -11,6 +11,7 @@ export const loader: LoaderFunction = async () => {
   console.log("Users");
   const users = db.query.users.findMany();
   console.log(users);
+  return {};
 };
 export default function Index() {
   return (
