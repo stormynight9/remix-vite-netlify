@@ -1,4 +1,5 @@
-import type { MetaFunction } from "@remix-run/node";
+import type { LoaderFunction, MetaFunction } from "@remix-run/node";
+import { db } from "~/db/drizzle";
 
 export const meta: MetaFunction = () => {
   return [
@@ -6,7 +7,11 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
-
+export const loader: LoaderFunction = async () => {
+  console.log("Users");
+  const users = db.query.users.findMany();
+  console.log(users);
+};
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
